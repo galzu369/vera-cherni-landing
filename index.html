@@ -224,6 +224,39 @@
       filter: contrast(1.15) brightness(0.9) saturate(1.2);
     }
 
+    .banner-blended {
+      mix-blend-mode: soft-light;
+      opacity: 0.75;
+      filter: contrast(1.2) brightness(1.1) saturate(1.15);
+      backdrop-filter: blur(0.5px);
+    }
+
+    .banner-container {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+
+    .banner-container::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      background: linear-gradient(135deg, rgba(0, 31, 63, 0.3) 0%, rgba(0, 179, 176, 0.2) 50%, rgba(173, 216, 230, 0.15) 100%);
+      border-radius: 12px;
+      filter: blur(12px);
+      z-index: -1;
+      opacity: 0.6;
+    }
+
+    .banner-container::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      border-radius: 8px;
+      pointer-events: none;
+    }
+
     .logo-rotate {
       animation: rotate 25s linear infinite;
       filter: drop-shadow(0 0 8px rgba(0, 179, 176, 0.3));
@@ -325,6 +358,11 @@
 
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         <div class="max-w-4xl mx-auto text-center">
+          <!-- Banner centered above title -->
+          <div class="banner-container mb-8 lg:mb-10" data-aos="fade-down" data-aos-duration="800">
+            <img src="./assets/Capture1.JPG" alt="Vera Cherni Consultancy Services — Customer Insight, Market Research, Strategic Advisory" class="max-w-full h-auto max-h-20 sm:max-h-24 lg:max-h-28 object-contain rounded-lg banner-blended shadow-2xl" loading="eager" />
+          </div>
+
           <h1 class="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight tracking-tight glitch-text" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
             Strategic Talent &amp; Commercial Advisory
             <span class="block mt-2 text-ice">— For Businesses and Ambitious Professionals</span>
