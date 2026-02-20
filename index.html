@@ -244,6 +244,15 @@
       animation-duration: 4s;
     }
 
+    .hero-round-logo-glitch {
+      animation: rotate 18s linear infinite, glitch-image 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 16px rgba(0, 179, 176, 0.5)) drop-shadow(0 0 32px rgba(0, 31, 63, 0.2));
+    }
+    .hero-round-logo-glitch:hover {
+      animation: rotate 8s linear infinite, glitch-image 2s ease-in-out infinite;
+      filter: drop-shadow(0 0 24px rgba(0, 179, 176, 0.7)) drop-shadow(0 0 48px rgba(0, 31, 63, 0.3));
+    }
+
     .check-icon::before {
       content: '✓';
       display: inline-flex;
@@ -270,8 +279,8 @@
   <header class="fixed top-0 left-0 right-0 z-50 nav-blur bg-white/90 border-b border-gray-100">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
       <div class="flex items-center justify-between h-16 lg:h-20">
-        <a href="#" class="flex items-center gap-3 shrink-0 group">
-          <img src="assets/Logo.JPG" alt="Vera Cherni Consultancy Logo" class="h-10 lg:h-12 w-auto logo-rotate image-blend group-hover:opacity-100 transition-opacity" loading="eager" />
+        <a href="#" class="flex items-center gap-3 shrink-0">
+          <img src="./assets/Logo.JPG" alt="Vera Cherni Consultancy Logo" class="h-10 lg:h-12 w-auto" loading="eager" />
         </a>
 
         <div class="hidden lg:flex items-center gap-8">
@@ -309,13 +318,13 @@
     <section class="relative gradient-hero wave-bottom min-h-screen flex items-center pt-20 lg:pt-0 overflow-hidden">
       <div class="absolute inset-0 gradient-mesh"></div>
 
+      <!-- Round Logo top right: rotating + glitch (replaces banner) -->
+      <div class="absolute top-20 right-4 sm:top-24 sm:right-8 lg:right-12 z-20 w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32" data-aos="fade-left" data-aos-duration="800" aria-hidden="true">
+        <img src="./assets/Round%20Logo.JPG" alt="Vera Cherni Consultancy" class="w-full h-full object-contain rounded-full border-2 border-white/40 shadow-2xl hero-round-logo-glitch" loading="eager" />
+      </div>
+
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         <div class="max-w-4xl mx-auto text-center">
-          <div class="relative mx-auto mb-10 max-w-4xl" data-aos="fade-down" data-aos-duration="800">
-            <img src="assets/Capture1.JPG" alt="Vera Cherni Consultancy Services — Customer Insight, Market Research, Strategic Advisory" class="mx-auto max-w-full h-auto max-h-24 lg:max-h-32 object-contain hero-banner-blend glitch-image" loading="eager" />
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20 pointer-events-none"></div>
-          </div>
-
           <h1 class="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight tracking-tight glitch-text" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
             Strategic Talent &amp; Commercial Advisory
             <span class="block mt-2 text-ice">— For Businesses and Ambitious Professionals</span>
@@ -556,7 +565,7 @@
             <div class="relative">
               <div class="absolute -inset-4 bg-gradient-to-br from-teal/30 to-navy/20 rounded-full blur-2xl rotate-slow"></div>
               <div class="absolute -inset-2 bg-gradient-to-tl from-teal/20 to-navy/10 rounded-full blur-xl rotate-medium"></div>
-              <img src="assets/Round Logo.JPG" alt="Vera Catalão Cherni — Independent Consultant" class="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-white shadow-2xl round-logo-glow image-blend-light glitch-image" loading="lazy" />
+              <img src="./assets/Round%20Logo.JPG" alt="Vera Catalão Cherni — Independent Consultant" class="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-white shadow-2xl round-logo-glow" loading="lazy" />
             </div>
           </div>
 
@@ -704,7 +713,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
 
         <div>
-          <img src="assets/Logo.JPG" alt="Vera Cherni Consultancy Logo" class="h-10 w-auto mb-5 brightness-200 contrast-50 image-blend-overlay rotate-slow hover:rotate-medium transition-all" loading="lazy" />
+          <img src="./assets/Logo.JPG" alt="Vera Cherni Consultancy Logo" class="h-10 w-auto mb-5 brightness-200 contrast-50" loading="lazy" />
           <p class="text-sm text-blue-200/70 leading-relaxed font-body">
             Strategic Talent &amp; Commercial Advisory for businesses and ambitious professionals.
           </p>
